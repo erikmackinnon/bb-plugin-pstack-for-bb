@@ -1,0 +1,24 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Local agent and editor state
+.claude/
+.bb/
+.vscode/
+.idea/
+
+# Secrets and local environment
+.env
+.env.*
+*.pem
+*.key
+
+# Logs and OS files
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Release staging
+release-out/
