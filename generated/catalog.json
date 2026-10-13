@@ -163,7 +163,7 @@
       "requires": [
         "maintain-verification-skill"
       ],
-      "upstreamHash": "f3a4a7adf405b58c5a526753e3497b9287233285760ab4741122d511a6d76b70",
+      "upstreamHash": "3b40443ffc2ec628683b79515f22fe9b6f8bdeeaf4932f60cf319d07e0f376c8",
       "userInvocableOnly": true
     },
     {
@@ -209,7 +209,21 @@
       "requires": [
         "why"
       ],
-      "upstreamHash": "f9bb8aa7102bb7568d98dfdea40e6d94c21b8c0d2e479ec77dea122ac170dec5",
+      "upstreamHash": "646c2ab868438464abec8d74e5a148918bfb2f7b4dc7455067b84d0e3ac3a820",
+      "userInvocableOnly": true
+    },
+    {
+      "bbName": "in-your-own-words",
+      "compatRules": [],
+      "description": "Restate in your own words what you think the user's goals are and what problem they're trying to solve. Use for /in-your-own-words.",
+      "displayName": "in-your-own-words",
+      "group": "entry-points",
+      "hasScripts": false,
+      "id": "in-your-own-words",
+      "prerequisites": [],
+      "requiredBy": [],
+      "requires": [],
+      "upstreamHash": "3206e955b8764cc58df2d7baa79f32a480ddb729b5c6d44ff823cf01a2a6e454",
       "userInvocableOnly": true
     },
     {
@@ -236,7 +250,7 @@
     {
       "bbName": "ketchup",
       "compatRules": [],
-      "description": "Catch the user up on everything in this chat since their last message, in plain words. Give each action item an executive summary with enough context to make the call. Use for /ketchup.",
+      "description": "Catch the user up on what changed in this chat since their last message, in a short reply built on real visuals. Give each action item just enough context to make the call. Use for /ketchup.",
       "displayName": "ketchup",
       "group": "other",
       "hasScripts": false,
@@ -246,7 +260,7 @@
       "requires": [
         "bro"
       ],
-      "upstreamHash": "28be9b7661fc8b2eaa14c06679177ddc282f3dd42a40a4c6b40d440b000b1c78",
+      "upstreamHash": "bb18686caf38008ebf3f456235873ff8f5a697014b52540dbae905212b1e8d11",
       "userInvocableOnly": true
     },
     {
@@ -307,7 +321,7 @@
         "principle-redesign-from-first-principles",
         "why"
       ],
-      "upstreamHash": "e4ef8b11099441a7f67c622d981dd671f77c967ac0f0151f7d239a80ddca85dc",
+      "upstreamHash": "a36114d59cd8f23b4a3d83f2b9b03eb430af5ff4d874ec8b1d679b52eb0ef198",
       "userInvocableOnly": true
     },
     {
@@ -323,7 +337,7 @@
       "prerequisites": [],
       "requiredBy": [],
       "requires": [],
-      "upstreamHash": "ac0213848c0ac2cf25f3ea9389afb7e546da1fff283b9a90ee886179de601c9f",
+      "upstreamHash": "bb99b7b71397a589c7e4774c51a20d2d2031c4e1ee7715ba4528c72b74e99598",
       "userInvocableOnly": true
     },
     {
@@ -385,7 +399,7 @@
         "unslop",
         "why"
       ],
-      "upstreamHash": "bf28e6f28d0989dd42683d69facd78b11cce3dad97060cfb51ba54298d5097ff",
+      "upstreamHash": "3a5c4b74cb2ec4198f51e21d58962f5d6d478c285784fda86d04ebdf3db9d5fc",
       "userInvocableOnly": true
     },
     {
@@ -456,7 +470,7 @@
         "principle-build-the-lever"
       ],
       "requires": [],
-      "upstreamHash": "6de41e779703c678be74469c81b02a59d622b982691c24215d0c97b749115fe6",
+      "upstreamHash": "665aa6c415069ccfa281ec9ff4b6b9540705c69911f3fad87dd93e888e3cea8e",
       "userInvocableOnly": true
     },
     {
@@ -470,7 +484,7 @@
       "prerequisites": [],
       "requiredBy": [],
       "requires": [],
-      "upstreamHash": "dbb87f3dc3421075ed7ab86c108caabe77a141337e164b9742d9abf72cb83011",
+      "upstreamHash": "02445d81cac6a6873e4f33b4b2e441f918aa1ef327fcf74ff19789e327d36307",
       "userInvocableOnly": true
     },
     {
@@ -518,7 +532,7 @@
         "principle-attack-the-premise"
       ],
       "requires": [],
-      "upstreamHash": "5c9ae81c7d90b8ffb8b26c6c18781924cee37e417dceac813e67eab55e441d59",
+      "upstreamHash": "9c90f4c7efcbe55272263519b0f4af6cff7f7e7f6c3fbb9c000714af6fe0fb8f",
       "userInvocableOnly": true
     },
     {
@@ -551,7 +565,7 @@
         "principle-minimize-reader-load"
       ],
       "requires": [],
-      "upstreamHash": "546897fcd1339562f21f80e1fd56eaff639839e05fab965b04453f60fffdaecb",
+      "upstreamHash": "6d522a49e303c98201f581010e0cad4936c0291d6bb36e81d57c0d37465cf4fe",
       "userInvocableOnly": true
     },
     {
@@ -569,7 +583,7 @@
         "principle-build-the-lever"
       ],
       "requires": [],
-      "upstreamHash": "71ea3bd3a1d08460f981d593002a4208f15be9c795e8c4b80a0d9202f5a18017",
+      "upstreamHash": "1441db1526f4da6be5e05ff36eafad3b1d771596449d9a1e93543b46efa82081",
       "userInvocableOnly": true
     },
     {
@@ -962,7 +976,7 @@
     {
       "bbName": "unslop",
       "compatRules": [],
-      "description": "Cut AI tells from any writing. Must always apply.",
+      "description": "Cut AI tells from any writing.",
       "displayName": "unslop",
       "group": "style",
       "hasScripts": false,
@@ -978,7 +992,7 @@
         "technical-writing"
       ],
       "requires": [],
-      "upstreamHash": "7b2bb4e2a0e2ce08a138446cf61a7c94c28629ab293c36a47367bb763fb0a830",
+      "upstreamHash": "ab509ab7222e351abb190d0a87a27be9776dadbf2bf3a610a18f1b27584c9563",
       "userInvocableOnly": true
     },
     {
@@ -1008,17 +1022,17 @@
       "requires": [
         "how"
       ],
-      "upstreamHash": "a92151ce1651c5a8bcb54d8d4ea96f27a7de126fe43da6990bc3ff0caf2949f4",
+      "upstreamHash": "5923e34c07f2cc40ddb8e618e653126b4106a08381260224ce1c4805e8394baf",
       "userInvocableOnly": true
     }
   ],
   "upstream": {
     "author": "Lauren Tan",
-    "commit": "978ca6e9c0e012047cd5058b8e829240336e704e",
-    "committedAt": "2026-10-10T22:47:33Z",
+    "commit": "dbf49813a39c1a5389c5e28cb8e4c1c2379e2454",
+    "committedAt": "2026-10-13T09:35:31-07:00",
     "license": "MIT",
     "path": "pstack",
     "repo": "cursor/plugins",
-    "version": "0.15.17"
+    "version": "0.15.23"
   }
 }
