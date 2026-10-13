@@ -250,7 +250,7 @@
     {
       "bbName": "ketchup",
       "compatRules": [],
-      "description": "Catch the user up on what changed in this chat since their last message, in a short reply built on real visuals. Give each action item just enough context to make the call. Use for /ketchup.",
+      "description": "Catch the user up on what changed in this chat since their last message, in a few plain sentences and small visuals. Give each action item just enough context to make the call. Use for /ketchup.",
       "displayName": "ketchup",
       "group": "other",
       "hasScripts": false,
@@ -260,7 +260,7 @@
       "requires": [
         "bro"
       ],
-      "upstreamHash": "bb18686caf38008ebf3f456235873ff8f5a697014b52540dbae905212b1e8d11",
+      "upstreamHash": "95508b95295d857bcfc7bfe1ae04a443ab10f97560829b848b6538267cfbcfc5",
       "userInvocableOnly": true
     },
     {
@@ -337,7 +337,7 @@
       "prerequisites": [],
       "requiredBy": [],
       "requires": [],
-      "upstreamHash": "bb99b7b71397a589c7e4774c51a20d2d2031c4e1ee7715ba4528c72b74e99598",
+      "upstreamHash": "6d37d42da53e7dcb6f29f9638d0b2f6423b450dad41e174af9d4516990e0fdb1",
       "userInvocableOnly": true
     },
     {
@@ -1028,8 +1028,8 @@
   ],
   "upstream": {
     "author": "Lauren Tan",
-    "commit": "dbf49813a39c1a5389c5e28cb8e4c1c2379e2454",
-    "committedAt": "2026-10-13T09:35:31-07:00",
+    "commit": "c86f349b102feb91f1966f8a6a60882a4e601b50",
+    "committedAt": "2026-10-13T14:39:54-07:00",
     "license": "MIT",
     "path": "pstack",
     "repo": "cursor/plugins",
