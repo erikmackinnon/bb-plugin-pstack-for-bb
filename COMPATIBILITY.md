@@ -67,4 +67,4 @@ The table lists all location entries and per-file counts. Long before/after cell
 
 A short runtime note is under 3,500 characters. It handles Cursor tool vocabulary, delegation, model/provider/effort discovery, scoped cleanup checks, missing integrations, and Bun prerequisites. The location advice now encoded in skill text has been removed from the note. No fixed model rewrite works across all providers; agents must discover available native model ids and reasoning efforts.
 
-The 53 primary skills are registered. The `agents/` files remain prompt references and Benny remains dormant. Installation does not supply Cursor custom modes, cursor-team-kit, Grok Bot Routines/webhooks, external MCPs, or Bun. Native invocation-disable parity and optional integrations still need live provider validation by the coordinator.
+The 54 primary skills are registered. The `agents/` files remain prompt references and Benny remains dormant. Installation does not supply Cursor custom modes, cursor-team-kit, Grok Bot Routines/webhooks, external MCPs, or Bun. Native invocation-disable parity and optional integrations still need live provider validation by the coordinator.

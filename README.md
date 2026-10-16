@@ -13,7 +13,7 @@ Use [Lauren Tan's pstack skills](https://github.com/cursor/plugins/tree/main/pst
 ## Install
 
 ```sh
-bb plugin install git:https://github.com/erikmackinnon/bb-plugin-pstack-for-bb.git@^0.1.8
+bb plugin install git:https://github.com/erikmackinnon/bb-plugin-pstack-for-bb.git@^0.1.10
 ```
 
 bb picks the highest compatible release, installs the runtime dependencies with npm, and builds the plugin.

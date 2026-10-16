@@ -47,8 +47,10 @@
         "figure-it-out",
         "poteto-mode"
       ],
-      "requires": [],
-      "upstreamHash": "af86c2b0e455aed27a28a9bdf00dcbbb8a002bf38d48d09c7342ab86004bde11",
+      "requires": [
+        "poteto-mode"
+      ],
+      "upstreamHash": "c4c1131d8027153e99004a7ba41edbabb0cd111908798003ad60ed7106671122",
       "userInvocableOnly": true
     },
     {
@@ -74,7 +76,7 @@
         "poteto-mode",
         "unslop"
       ],
-      "upstreamHash": "e24569b2a4178fd2d1ea3d2c152d179bef5ef30362b8f967d608ff7a43867e5c",
+      "upstreamHash": "ac7bd720c50fe9fd464c902310aa43ed01ef225040ce3bf8d1c6a616d276d721",
       "userInvocableOnly": true
     },
     {
@@ -142,7 +144,7 @@
       "prerequisites": [],
       "requiredBy": [],
       "requires": [],
-      "upstreamHash": "7c6f03d3db5d0dc36426a4197f45f59c5bf8738267f8406920bdbb0747e6b194",
+      "upstreamHash": "4490a11cf88e3626e561d70f04e90d9e2c1ef254073c6f064cccb52a9e4a0cf1",
       "userInvocableOnly": true
     },
     {
@@ -184,7 +186,7 @@
         "poteto-mode",
         "show-me-your-work"
       ],
-      "upstreamHash": "169038cf628d4a4c59c36b33aeefece376b83b0e48fb0b1fad9dd95e2696c59f",
+      "upstreamHash": "81f55cd6e9744f4f15937fc6d9dcd8c43c09e3a8ea666b8c4726607934114431",
       "userInvocableOnly": true
     },
     {
@@ -207,9 +209,10 @@
         "why"
       ],
       "requires": [
+        "poteto-mode",
         "why"
       ],
-      "upstreamHash": "646c2ab868438464abec8d74e5a148918bfb2f7b4dc7455067b84d0e3ac3a820",
+      "upstreamHash": "b421a9866b0127069c58c61ffe7b4a3116a62dd2399a56f9de4fce30d6ee4c44",
       "userInvocableOnly": true
     },
     {
@@ -243,8 +246,10 @@
         "architect",
         "poteto-mode"
       ],
-      "requires": [],
-      "upstreamHash": "4fc7aa95dd2ea296136a5c7b4be0c55336f65b44f67237f59490d1da003437e2",
+      "requires": [
+        "poteto-mode"
+      ],
+      "upstreamHash": "50338915e2063ffabae433089a6ec7bfccca78cd76e4013b3601903d23ff0236",
       "userInvocableOnly": true
     },
     {
@@ -256,11 +261,13 @@
       "hasScripts": false,
       "id": "ketchup",
       "prerequisites": [],
-      "requiredBy": [],
+      "requiredBy": [
+        "poteto-mode"
+      ],
       "requires": [
         "bro"
       ],
-      "upstreamHash": "95508b95295d857bcfc7bfe1ae04a443ab10f97560829b848b6538267cfbcfc5",
+      "upstreamHash": "efb6799f8d6f29347625a51e651a3c5be08c3b9007d5c022318204248382dbb2",
       "userInvocableOnly": true
     },
     {
@@ -317,11 +324,12 @@
       "requires": [
         "architect",
         "how",
+        "poteto-mode",
         "principle-fix-root-causes",
         "principle-redesign-from-first-principles",
         "why"
       ],
-      "upstreamHash": "a36114d59cd8f23b4a3d83f2b9b03eb430af5ff4d874ec8b1d679b52eb0ef198",
+      "upstreamHash": "ca0715c91db5351ad87e468387a130bb583f0e303bbf69401849736a615f6eea",
       "userInvocableOnly": true
     },
     {
@@ -337,7 +345,7 @@
       "prerequisites": [],
       "requiredBy": [],
       "requires": [],
-      "upstreamHash": "6d37d42da53e7dcb6f29f9638d0b2f6423b450dad41e174af9d4516990e0fdb1",
+      "upstreamHash": "a0018263ab1a1eaddc4f96f78366f5ea60c622a43b1d5ce060b0b42e5984aa01",
       "userInvocableOnly": true
     },
     {
@@ -366,8 +374,17 @@
         "sed"
       ],
       "requiredBy": [
+        "arena",
         "automate-me",
-        "figure-it-out"
+        "figure-it-out",
+        "how",
+        "interrogate",
+        "no-comments",
+        "recall",
+        "reflect",
+        "show-me-your-work",
+        "swarm",
+        "why"
       ],
       "requires": [
         "architect",
@@ -376,6 +393,7 @@
         "figure-it-out",
         "how",
         "interrogate",
+        "ketchup",
         "no-comments",
         "principle-build-the-lever",
         "principle-encode-lessons-in-structure",
@@ -399,13 +417,13 @@
         "unslop",
         "why"
       ],
-      "upstreamHash": "3a5c4b74cb2ec4198f51e21d58962f5d6d478c285784fda86d04ebdf3db9d5fc",
+      "upstreamHash": "b86c59485dff891a7d587aae3f0c625d338d7b50c0f5afb7d9402816e9029330",
       "userInvocableOnly": true
     },
     {
       "bbName": "principle-attack-the-premise",
       "compatRules": [],
-      "description": "Apply when two or more fixes that share one premise have failed the same gate. Take a census of which actors hold the imbalance before the next fix, then question the premise instead of writing another fix that assumes it.",
+      "description": "Apply when two or more fixes that share one premise have failed the same gate. Write the premise down and test it directly before you write another fix that assumes it.",
       "displayName": "principle-attack-the-premise",
       "group": "principles",
       "hasScripts": false,
@@ -418,7 +436,7 @@
         "principle-laziness-protocol",
         "principle-redesign-from-first-principles"
       ],
-      "upstreamHash": "8da2dd9bb439039e27f30b50e61253c14f8bbcd29dad6960983d24beda249a27",
+      "upstreamHash": "af82d78088bf768f9ecad9a1ea31608c90b47208601d198ca11279522a602d9f",
       "userInvocableOnly": true
     },
     {
@@ -521,7 +539,7 @@
     {
       "bbName": "principle-fix-root-causes",
       "compatRules": [],
-      "description": "Apply when debugging. Trace each symptom to its root cause and fix it there; reproduce first, ask why until you reach it, resist nil-check guards that silence crashes.",
+      "description": "Apply when debugging. Trace each symptom back to the first place the system went wrong and fix it there. A guard is a fix only when the state it handles is legitimate.",
       "displayName": "principle-fix-root-causes",
       "group": "principles",
       "hasScripts": false,
@@ -532,7 +550,7 @@
         "principle-attack-the-premise"
       ],
       "requires": [],
-      "upstreamHash": "9c90f4c7efcbe55272263519b0f4af6cff7f7e7f6c3fbb9c000714af6fe0fb8f",
+      "upstreamHash": "4ee417cdf3baa12b47bf9e04f3f7c97f6dcd29712522b06cbb0f89df9d4322ba",
       "userInvocableOnly": true
     },
     {
@@ -597,7 +615,7 @@
       "prerequisites": [],
       "requiredBy": [],
       "requires": [],
-      "upstreamHash": "36038ea2a2607e7588b4df655a9c60866d291b7a2fa16878564190e7713dc07f",
+      "upstreamHash": "7b7a21363d05dcbf5a0e3b59d42c69d34d231316ff001d3e48851ad6725eacf1",
       "userInvocableOnly": true
     },
     {
@@ -613,7 +631,7 @@
         "poteto-mode"
       ],
       "requires": [],
-      "upstreamHash": "6dc60a319f381a10b20c650b2ee5face37a136c241a148e2cc143a17dead21e2",
+      "upstreamHash": "2ab5a2b767bd4f02b923e01d07598e471d291845f5995c705d14f0bd9825b0fc",
       "userInvocableOnly": true
     },
     {
@@ -767,7 +785,7 @@
     {
       "bbName": "principle-test-behavior-not-implementation",
       "compatRules": [],
-      "description": "Apply when you write, change, or keep a test. Call the code as its users do and assert the exact result they see. Rewrite or delete a test that would pass if every imported function returned undefined.",
+      "description": "Apply when you write, change, or keep a test. Assert what the code's users can observe, so that the test fails when that behavior breaks and keeps passing when only the internals change.",
       "displayName": "principle-test-behavior-not-implementation",
       "group": "principles",
       "hasScripts": false,
@@ -775,13 +793,13 @@
       "prerequisites": [],
       "requiredBy": [],
       "requires": [],
-      "upstreamHash": "1e204ece8d77b86dec879fd6a1b9c9ac9d5c17a7267bba710cd0488f24ac937e",
+      "upstreamHash": "46ab85961ede9dc8f13dfe274727dc89fed4b10e9602a03d649060a91713045b",
       "userInvocableOnly": true
     },
     {
       "bbName": "principle-type-system-discipline",
       "compatRules": [],
-      "description": "Apply when designing types, reviewing a function signature, or writing code in any statically-typed language. Make illegal states unrepresentable, brand semantic primitives, parse external data at boundaries, refuse to lie to the compiler, exhaust variants, derive from authoritative schemas.",
+      "description": "Apply when designing types, reviewing a function signature, or writing code in any statically-typed language. Make illegal states unrepresentable, brand semantic primitives, parse external data at boundaries, exhaust variants, derive from authoritative schemas.",
       "displayName": "principle-type-system-discipline",
       "group": "principles",
       "hasScripts": false,
@@ -791,7 +809,7 @@
       "requires": [
         "typescript-best-practices"
       ],
-      "upstreamHash": "b2214d84a30a908d076cc30df913ec864e917d4e1611372859e4ef0d72d0f693",
+      "upstreamHash": "acadd54aceafd3f629528a9445a3af2a0ef2e125b9eb161bafd1f27db3e1066a",
       "userInvocableOnly": true
     },
     {
@@ -811,10 +829,11 @@
       "requiredBy": [],
       "requires": [
         "automate-me",
+        "poteto-mode",
         "unslop",
         "why"
       ],
-      "upstreamHash": "4c976573efc5bd3af68f374b7744a062c0a55617404ccd834361dad2634de2c6",
+      "upstreamHash": "1991c642818b47ae84e65ee90d0314bc2fe743165693b60bb3efa72b111b2958",
       "userInvocableOnly": true
     },
     {
@@ -835,8 +854,10 @@
       "requiredBy": [
         "poteto-mode"
       ],
-      "requires": [],
-      "upstreamHash": "b74bf93b8cda7fe183ec3f39d2229d55747433c27394659130cbac2357d72de3",
+      "requires": [
+        "poteto-mode"
+      ],
+      "upstreamHash": "8f26f1a7b6d9c72fc2ce7d840126349ac97ec8843a6bde6ce3a950fb39867f0a",
       "userInvocableOnly": true
     },
     {
@@ -862,6 +883,20 @@
       "userInvocableOnly": false
     },
     {
+      "bbName": "sharpen",
+      "compatRules": [],
+      "description": "Sharpen a task before starting: the expert approach, what the user is really after, and the right level of specification. Use for /sharpen.",
+      "displayName": "sharpen",
+      "group": "entry-points",
+      "hasScripts": false,
+      "id": "sharpen",
+      "prerequisites": [],
+      "requiredBy": [],
+      "requires": [],
+      "upstreamHash": "113b9a1ed13cb7dee52d5cfd0fe5eff56c17e0c0c76fac5ac57a015caf5cf383",
+      "userInvocableOnly": true
+    },
+    {
       "bbName": "show-me-your-work",
       "compatRules": [
         "bb-path-work-log-history"
@@ -880,9 +915,10 @@
         "principle-prove-it-works"
       ],
       "requires": [
+        "poteto-mode",
         "unslop"
       ],
-      "upstreamHash": "211dedf90add73f85ee6bfbdd8a3d65fc3eb403694cd0def90f489203ff92c21",
+      "upstreamHash": "20b9432ca83027a2e59f4b66880e43fbc8145d8251bd6376984a5d265258a4d2",
       "userInvocableOnly": true
     },
     {
@@ -899,8 +935,10 @@
       "requiredBy": [
         "poteto-mode"
       ],
-      "requires": [],
-      "upstreamHash": "7bbdec4eda3ab3f3038889abdaf61acaec5ee006b210a1c788ee36a155d62619",
+      "requires": [
+        "poteto-mode"
+      ],
+      "upstreamHash": "b54f1e76131a6a0ca96ee316d4751a7d1b90ce240920f258a6720b582bce63e6",
       "userInvocableOnly": true
     },
     {
@@ -1020,19 +1058,20 @@
         "teach"
       ],
       "requires": [
-        "how"
+        "how",
+        "poteto-mode"
       ],
-      "upstreamHash": "5923e34c07f2cc40ddb8e618e653126b4106a08381260224ce1c4805e8394baf",
+      "upstreamHash": "6496af02031a7ae63583aa37101c7dc3223b3092ad9797bf40efdfd742a22653",
       "userInvocableOnly": true
     }
   ],
   "upstream": {
     "author": "Lauren Tan",
-    "commit": "c86f349b102feb91f1966f8a6a60882a4e601b50",
-    "committedAt": "2026-10-13T14:39:54-07:00",
+    "commit": "99743e9c151c8537cbbf1f98bb38f34ef3368453",
+    "committedAt": "2026-10-15T09:29:09-07:00",
     "license": "MIT",
     "path": "pstack",
     "repo": "cursor/plugins",
-    "version": "0.15.23"
+    "version": "0.15.25"
   }
 }

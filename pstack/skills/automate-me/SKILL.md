@@ -28,7 +28,7 @@ Update mode changes the rest of the flow:
 
 Locate this thread's history via `bb thread log --self --all --format json`; other threads via `bb thread list --project <project-id> --environment <environment-id> --include-hidden --json` then `bb thread log <id> --all --format json` before fanning out. Use `bb thread search <query>` only when authorized to search its scope. Scope reads to the active project and environment. Check thread identity before reading; do not read private chats from unrelated projects.
 
-Survey recent agent conversations within that scope for recurring patterns. Run multiple parallel subagents across slices of history (e.g. last 2-4 weeks, split into 3 slices so each has enough material). Each slice mining subagent reads thread logs from the project/environment-scoped thread ids the parent provides, looks for the signals below, and returns a short structured list of patterns it saw with evidence pointers. Default signals worth hunting:
+Survey recent agent conversations within that scope for recurring patterns. Run multiple parallel subagents across slices of history (e.g. last 2-4 weeks, split into 3 slices so each has enough material). Pick each subagent's reasoning level and fast or standard speed for the job, per the Subagents section of the **poteto-mode** skill. Each slice mining subagent reads thread logs from the project/environment-scoped thread ids the parent provides, looks for the signals below, and returns a short structured list of patterns it saw with evidence pointers. Default signals worth hunting:
 
 - Response preferences (length, tone, format, "dumb it down" corrections)
 - Delegation habits (subagents, models, specialized workflows, parallelism)
