@@ -148,6 +148,27 @@
       "userInvocableOnly": true
     },
     {
+      "bbName": "create-formal-verification-skill",
+      "compatRules": [
+        "bb-path-create-formal-verification-skill"
+      ],
+      "description": "Generate a project-local skill that formally verifies the code where a bug costs the most and tests reach the least, in any language, with whichever verification tool fits. Use for /create-formal-verification-skill, \"model-check this race\", \"prove this invariant\", or when concurrency, retries, state machines, parsers, or unsafe code need more than tests.",
+      "displayName": "create-formal-verification-skill",
+      "group": "verification",
+      "hasScripts": false,
+      "id": "create-formal-verification-skill",
+      "prerequisites": [],
+      "requiredBy": [
+        "maintain-formal-verification-skill",
+        "setup-pstack"
+      ],
+      "requires": [
+        "maintain-formal-verification-skill"
+      ],
+      "upstreamHash": "5b369cf88e3a59eda726748ec44243fd1cce8a5f299a2b9bb7a83ace8971038a",
+      "userInvocableOnly": true
+    },
+    {
       "bbName": "create-verification-skill",
       "compatRules": [
         "bb-path-create-verification-skill"
@@ -255,7 +276,7 @@
     {
       "bbName": "ketchup",
       "compatRules": [],
-      "description": "Catch the user up on what changed in this chat since their last message, in a few plain sentences and small visuals. Give each action item just enough context to make the call. Use for /ketchup.",
+      "description": "Catch the user up on what changed in this chat since their last message, in plain words and small visuals. List every item waiting on them with what they need to decide it from the reply alone. Use for /ketchup.",
       "displayName": "ketchup",
       "group": "other",
       "hasScripts": false,
@@ -267,7 +288,25 @@
       "requires": [
         "bro"
       ],
-      "upstreamHash": "efb6799f8d6f29347625a51e651a3c5be08c3b9007d5c022318204248382dbb2",
+      "upstreamHash": "8039aa0c9f05b71f39d04aaa80ad5da60ffe7ca7edb72e40553128d9b24e4f25",
+      "userInvocableOnly": true
+    },
+    {
+      "bbName": "maintain-formal-verification-skill",
+      "compatRules": [],
+      "description": "Bring a project's formal verification back in line with the code after the code changes: find the commits that touched verified code, update the model, harness, or properties to describe the code as it is now, rerun, and say whether each failure is drift in the verification or a bug in the code. Use for /maintain-formal-verification-skill, \"is the model still true to the code\", or after merges and refactors that touched verified code without rechecking it.",
+      "displayName": "maintain-formal-verification-skill",
+      "group": "verification",
+      "hasScripts": false,
+      "id": "maintain-formal-verification-skill",
+      "prerequisites": [],
+      "requiredBy": [
+        "create-formal-verification-skill"
+      ],
+      "requires": [
+        "create-formal-verification-skill"
+      ],
+      "upstreamHash": "759f8818a9889ce88a8ae6e2d1fff92e5743bad771dd0708655ddbddae9c4850",
       "userInvocableOnly": true
     },
     {
@@ -292,11 +331,9 @@
     },
     {
       "bbName": "make-bot-ui",
-      "compatRules": [
-        "bb-skill-name-make-bot-ui"
-      ],
+      "compatRules": [],
       "description": "Use when building a custom UI (page, dashboard, buttons) that should wake a Grok Bot over a webhook, when the user must provide a webhook sender key, or when exposing that UI on Tailscale.",
-      "displayName": "Make Bot UI",
+      "displayName": "make-bot-ui",
       "group": "workflow",
       "hasScripts": false,
       "id": "make-bot-ui",
@@ -306,7 +343,7 @@
       ],
       "requiredBy": [],
       "requires": [],
-      "upstreamHash": "e30b563e8f0614fa1826186b8e61bdc8b974a7b2eb84b78e184b0fce7a9d3000",
+      "upstreamHash": "717968e75caa1e55a5c42614c4ec2bf0e18902db6903eca992fb739e9cf55ad8",
       "userInvocableOnly": true
     },
     {
@@ -345,7 +382,7 @@
       "prerequisites": [],
       "requiredBy": [],
       "requires": [],
-      "upstreamHash": "a0018263ab1a1eaddc4f96f78366f5ea60c622a43b1d5ce060b0b42e5984aa01",
+      "upstreamHash": "5b67619e0fb0f85e5d04226c3aa2736476a321abde4bbbcd7deb231eb98c6a3e",
       "userInvocableOnly": true
     },
     {
@@ -354,11 +391,10 @@
         "bb-path-eval-history",
         "bb-path-orchestrate-history",
         "bb-path-pickup-history",
-        "bb-skill-name-poteto-mode",
         "bb-worktree-usage-gate"
       ],
       "description": "poteto's agent style for concise, detailed responses, deliberate subagents, unslopped prose, simple code, and verified work. Use for poteto, /poteto-mode, or requests to work in this style.",
-      "displayName": "Poteto Mode",
+      "displayName": "poteto-mode",
       "group": "entry-points",
       "hasScripts": true,
       "id": "poteto-mode",
@@ -417,7 +453,7 @@
         "unslop",
         "why"
       ],
-      "upstreamHash": "b86c59485dff891a7d587aae3f0c625d338d7b50c0f5afb7d9402816e9029330",
+      "upstreamHash": "e7e4e8681351274fb7e465525868a89ba057055912c57968ebc29a40fa856ff5",
       "userInvocableOnly": true
     },
     {
@@ -877,15 +913,16 @@
         "poteto-mode"
       ],
       "requires": [
+        "create-formal-verification-skill",
         "create-verification-skill"
       ],
-      "upstreamHash": "a57f57285402fdc52f08fdf45f926a8815a52ff11db127dd4a77d262c929d944",
+      "upstreamHash": "fe1266a8fc553133f7192ca58ad093c3269006e8630bb56948acac2e9532f0eb",
       "userInvocableOnly": false
     },
     {
       "bbName": "sharpen",
       "compatRules": [],
-      "description": "Sharpen a task before starting: the expert approach, what the user is really after, and the right level of specification. Use for /sharpen.",
+      "description": "Make a task deeper, not bigger, then rewrite the prompt. Use for /sharpen.",
       "displayName": "sharpen",
       "group": "entry-points",
       "hasScripts": false,
@@ -893,7 +930,7 @@
       "prerequisites": [],
       "requiredBy": [],
       "requires": [],
-      "upstreamHash": "113b9a1ed13cb7dee52d5cfd0fe5eff56c17e0c0c76fac5ac57a015caf5cf383",
+      "upstreamHash": "e7f889cf592f8260808571648d73936672a6eccb365c7b410f288beb6dcf8348",
       "userInvocableOnly": true
     },
     {
@@ -1008,7 +1045,7 @@
         "principle-type-system-discipline"
       ],
       "requires": [],
-      "upstreamHash": "258fb232b90075a8561cf5e99d3d70dd09bf7b6add33411aad4d29c7650e6823",
+      "upstreamHash": "4da6dd91e382b65f8b066120b2a3520f6716a24a4e38a3c3cea020c2d3bdec80",
       "userInvocableOnly": true
     },
     {
@@ -1067,11 +1104,11 @@
   ],
   "upstream": {
     "author": "Lauren Tan",
-    "commit": "99743e9c151c8537cbbf1f98bb38f34ef3368453",
-    "committedAt": "2026-10-15T09:29:09-07:00",
+    "commit": "88d47514b82e7c44f00f2b2a72ff6dd12158038c",
+    "committedAt": "2026-10-19T19:24:33-07:00",
     "license": "MIT",
     "path": "pstack",
     "repo": "cursor/plugins",
-    "version": "0.15.25"
+    "version": "0.15.29"
   }
 }

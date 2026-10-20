@@ -1,6 +1,6 @@
 # What changes in the bb copy
 
-[pstack](https://github.com/cursor/plugins/tree/main/pstack) is Lauren Tan's, written for Cursor. This plugin bundles it adapted only where Cursor locations don't exist in bb, plus two frontmatter name fixes and a worktree safety gate. Tool names, model slugs, role labels, budgets, and workflows remain Lauren's.
+[pstack](https://github.com/cursor/plugins/tree/main/pstack) is Lauren Tan's, written for Cursor. This plugin bundles it adapted only where Cursor locations don't exist in bb, plus a worktree safety gate. Tool names, model slugs, role labels, budgets, and workflows remain Lauren's.
 
 Every change is a fail-closed rule with an exact file, exact before text, after text, expected occurrence count, and reason. If upstream changes so a rule no longer matches exactly, no automatic release is made until a maintainer reviews it; you stay on the last good release.
 
@@ -8,13 +8,11 @@ Every change is a fail-closed rule with an exact file, exact before text, after 
 
 | Rule | File | Before | After | Reason |
 | --- | --- | --- | --- | --- |
-| `bb-skill-name-poteto-mode` | `skills/poteto-mode/SKILL.md` | `name: Poteto Mode` | `name: poteto-mode` | bb's configuration identity must match its valid directory id. |
-| `bb-skill-name-make-bot-ui` | `skills/make-bot-ui/SKILL.md` | `name: Make Bot UI` | `name: make-bot-ui` | The same portable identity constraint applies. |
 | `bb-worktree-usage-gate` | `skills/poteto-mode/scripts/worktree-audit.sh` | `bucket=safe` | `bucket=hold-verify-bb-usage` | Cursor transcripts cannot establish bb worktree usage. |
 
-Name rules expect one exact opening frontmatter anchor. The worktree rule expects one exact classifier clause, one exact Cursor transcript assignment, and exactly one `bucket=safe` assignment. It keeps the script's Git, PR, dirtiness, size, and other buckets. Every `hold-verify-bb-usage` bucket requires checking bb's pinned/active threads and their environments before removal.
+The worktree rule expects one exact classifier clause, one exact Cursor transcript assignment, and exactly one `bucket=safe` assignment. It keeps the script's Git, PR, dirtiness, size, and other buckets. Every `hold-verify-bb-usage` bucket requires checking bb's pinned/active threads and their environments before removal.
 
-`bb-skill-name-contract` validates resulting primary frontmatter and directory ids. New display names, missing or duplicate names, malformed headers, and invalid ids fail closed. Unknown Cursor metadata and `disable-model-invocation` remain unchanged. The catalog preserves upstream display names for the GUI.
+Since pstack 0.15.29 every upstream skill's frontmatter name matches its folder, so the earlier `poteto-mode` and `make-bot-ui` name rules were retired. `bb-skill-name-contract` still validates every primary frontmatter name against its directory id. New display names, missing or duplicate names, malformed headers, and invalid ids fail closed. Unknown Cursor metadata and `disable-model-invocation` remain unchanged.
 
 ## Location transformations
 
@@ -62,9 +60,11 @@ The table lists all location entries and per-file counts. Long before/after cell
 | `bb-path-eval-history` | `skills/poteto-mode/playbooks/eval.md` | 1 | Read each candidate's local transcript under the active workspace's &#96;agent-transcripts/&#96; directory (the system prompt names this path). Do not glob across &#96;~/.cursor/projects/*/… | Read each candidate's thread history via &#96;bb thread log <id> --all --format json&#96;. Locate ids with &#96;bb thread list --project <project-id> --environment <environment-id> --includ… | Cursor locations do not exist in bb; use the corresponding bb loader or history interface. |
 | `bb-path-orchestrate-history` | `skills/poteto-mode/playbooks/orchestrate.md` | 1 | Reading local transcripts under &#96;agent-transcripts/&#96;. | Reading this thread's history via &#96;bb thread log --self --all --format json&#96;, or other in-scope threads via &#96;bb thread list --project <project-id> --environment <environment-id>… | Cursor locations do not exist in bb; use the corresponding bb loader or history interface. |
 | `bb-path-poteto-agent-mode` | `agents/poteto-agent.md` | 1 | With no path, before any other work, search &#96;~/.cursor/plugins/&#96; for a file whose path ends in &#96;skills/poteto-mode/SKILL.md&#96;. If more than one file ma… | With no path, before any other work, ask your parent for the absolute path of pstack's &#96;skills/poteto-mode/SKILL.md&#96;. bb keeps plugin files in internal caches, so never search for or guess one. | bb has no ~/.cursor/plugins directory or .cursor-plugin manifest; its plugin caches are internal, so the parent supplies the path. |
+| `bb-path-create-formal-verification-skill` | `skills/create-formal-verification-skill/SKILL.md` | 1 | Write a project-local skill with frontmatter that names the area and says when to use it. | Write a project-local skill at &#96;.bb/skills/<name>/SKILL.md&#96;, exactly one directory level below &#96;.bb/skills/&#96;, with frontmatter that names the area and says when to use it. | bb loads project skills from .bb/skills, exactly one directory level below that root; an unnamed location invites Cursor or Claude Code habits. |
+| `bb-harness-claude-code-scope` | `docs/harness/claude-code.md` | 1 | pstack skills use Cursor names. In Claude Code, read this file once per session, then map each Cursor name in a skill with the tables below. | pstack skills use Cursor names. This file maps them for Claude Code's own pstack plugin install. In bb, including bb threads on the Claude Code provider, do not use this file: follow bb's pstack runtime note and the bb locations already written into the skills. The tables below are kept for reference only. | The Claude Code adapter points model settings at ~/.claude/rules and history at ~/.claude/projects; in bb those live in the AGENTS.md pstack-models section and bb thread history. |
 
 ## Runtime differences
 
 A short runtime note is under 3,500 characters. It handles Cursor tool vocabulary, delegation, model/provider/effort discovery, scoped cleanup checks, missing integrations, and Bun prerequisites. The location advice now encoded in skill text has been removed from the note. No fixed model rewrite works across all providers; agents must discover available native model ids and reasoning efforts.
 
-The 54 primary skills are registered. The `agents/` files remain prompt references and Benny remains dormant. Installation does not supply Cursor custom modes, cursor-team-kit, Grok Bot Routines/webhooks, external MCPs, or Bun. Native invocation-disable parity and optional integrations still need live provider validation by the coordinator.
+The 56 primary skills are registered. The `agents/` files remain prompt references and Benny remains dormant. Installation does not supply Cursor custom modes, cursor-team-kit, Grok Bot Routines/webhooks, external MCPs, or Bun. Native invocation-disable parity and optional integrations still need live provider validation by the coordinator.

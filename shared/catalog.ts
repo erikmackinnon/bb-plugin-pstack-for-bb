@@ -19,7 +19,7 @@ export const catalogSkillSchema = z.object({
   id: z.string(),
   /** Name bb resolves for this skill (what configure() must return). */
   bbName: z.string(),
-  /** Human label, from upstream frontmatter `name` (e.g. "Poteto Mode"). */
+  /** Human label, from upstream frontmatter `name` (e.g. "poteto-mode"). */
   displayName: z.string(),
   description: z.string(),
   group: z.enum(SKILL_GROUPS),
