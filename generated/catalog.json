@@ -163,9 +163,10 @@
         "setup-pstack"
       ],
       "requires": [
-        "maintain-formal-verification-skill"
+        "maintain-formal-verification-skill",
+        "statechart"
       ],
-      "upstreamHash": "5b369cf88e3a59eda726748ec44243fd1cce8a5f299a2b9bb7a83ace8971038a",
+      "upstreamHash": "de9511cdf0561161bdab492b21bcaff869d331bde04854fee47e74beaf9a44ec",
       "userInvocableOnly": true
     },
     {
@@ -283,12 +284,29 @@
       "id": "ketchup",
       "prerequisites": [],
       "requiredBy": [
+        "ketchup-video",
         "poteto-mode"
       ],
       "requires": [
         "bro"
       ],
       "upstreamHash": "8039aa0c9f05b71f39d04aaa80ad5da60ffe7ca7edb72e40553128d9b24e4f25",
+      "userInvocableOnly": true
+    },
+    {
+      "bbName": "ketchup-video",
+      "compatRules": [],
+      "description": "Catch the user up like /ketchup, with a short silent video of slides for what happened and the waiting calls as text under it. Use for /ketchup-video.",
+      "displayName": "ketchup-video",
+      "group": "other",
+      "hasScripts": false,
+      "id": "ketchup-video",
+      "prerequisites": [],
+      "requiredBy": [],
+      "requires": [
+        "ketchup"
+      ],
+      "upstreamHash": "e2cd5dc2628d008dfd69c21c11311a41685d8e418bef414c0f11755bb98cfc01",
       "userInvocableOnly": true
     },
     {
@@ -382,7 +400,7 @@
       "prerequisites": [],
       "requiredBy": [],
       "requires": [],
-      "upstreamHash": "5b67619e0fb0f85e5d04226c3aa2736476a321abde4bbbcd7deb231eb98c6a3e",
+      "upstreamHash": "fd51362bb891b956f0f1679fb02ae76d562f0e79808f279514d4a82a295e2111",
       "userInvocableOnly": true
     },
     {
@@ -453,7 +471,7 @@
         "unslop",
         "why"
       ],
-      "upstreamHash": "e7e4e8681351274fb7e465525868a89ba057055912c57968ebc29a40fa856ff5",
+      "upstreamHash": "ccf433b4903515fcf487e13fd2bd344c0c40a138978089f3b441bd94f49f2853",
       "userInvocableOnly": true
     },
     {
@@ -876,6 +894,7 @@
       "bbName": "reflect",
       "compatRules": [
         "bb-path-reflect-divergent-roots",
+        "bb-path-reflect-edit-destination",
         "bb-path-reflect-history",
         "bb-path-reflect-judgment-roots",
         "bb-path-reflect-models",
@@ -893,7 +912,7 @@
       "requires": [
         "poteto-mode"
       ],
-      "upstreamHash": "8f26f1a7b6d9c72fc2ce7d840126349ac97ec8843a6bde6ce3a950fb39867f0a",
+      "upstreamHash": "a5eaf0a6507092f436e507a98694a128fa587bccdc57ef8ce714a8b4b90b01c4",
       "userInvocableOnly": true
     },
     {
@@ -959,6 +978,26 @@
       "userInvocableOnly": true
     },
     {
+      "bbName": "statechart",
+      "compatRules": [],
+      "description": "Draw how any system moves between states, such as a product flow, a protocol, or a service, as a Mermaid statechart from a TLA+ model. Each bug is a numbered path with blue borders to a state that breaks a rule. Use for /statechart, to show a bug as a path through states, or to turn an agreed chart into a TLA+ skeleton.",
+      "displayName": "statechart",
+      "group": "verification",
+      "hasScripts": true,
+      "id": "statechart",
+      "prerequisites": [
+        "node",
+        "npm",
+        "sed"
+      ],
+      "requiredBy": [
+        "create-formal-verification-skill"
+      ],
+      "requires": [],
+      "upstreamHash": "2553a7ef758dbafb496a1c978a7b5dcd823a566550c1901f890c65249b0f3a60",
+      "userInvocableOnly": true
+    },
+    {
       "bbName": "swarm",
       "compatRules": [
         "bb-path-swarm-models"
@@ -975,7 +1014,7 @@
       "requires": [
         "poteto-mode"
       ],
-      "upstreamHash": "b54f1e76131a6a0ca96ee316d4751a7d1b90ce240920f258a6720b582bce63e6",
+      "upstreamHash": "d578ced93f2e9d44a77d9bf39780e83a54e2c333683186156a18c0fcddbd26da",
       "userInvocableOnly": true
     },
     {
@@ -1104,11 +1143,11 @@
   ],
   "upstream": {
     "author": "Lauren Tan",
-    "commit": "88d47514b82e7c44f00f2b2a72ff6dd12158038c",
-    "committedAt": "2026-10-19T19:24:33-07:00",
+    "commit": "e73df471cd4bd918367e99f3dd9c51bd53ddf5f0",
+    "committedAt": "2026-10-23T15:56:09-07:00",
     "license": "MIT",
     "path": "pstack",
     "repo": "cursor/plugins",
-    "version": "0.15.29"
+    "version": "0.15.32"
   }
 }

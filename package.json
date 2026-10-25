@@ -1,6 +1,6 @@
 {
   "name": "bb-plugin-pstack-for-bb",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "type": "module",
   "engines": {
     "bb": ">=0.45",
