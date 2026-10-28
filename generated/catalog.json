@@ -45,12 +45,13 @@
         "architect",
         "blast-radius",
         "figure-it-out",
+        "interrogate",
         "poteto-mode"
       ],
       "requires": [
         "poteto-mode"
       ],
-      "upstreamHash": "c4c1131d8027153e99004a7ba41edbabb0cd111908798003ad60ed7106671122",
+      "upstreamHash": "af1d9345489674db4605484e9deca78e24d49d0c14df5e8cf6240659a822b7f2",
       "userInvocableOnly": true
     },
     {
@@ -166,7 +167,7 @@
         "maintain-formal-verification-skill",
         "statechart"
       ],
-      "upstreamHash": "de9511cdf0561161bdab492b21bcaff869d331bde04854fee47e74beaf9a44ec",
+      "upstreamHash": "c1c1fe37930ce3fa7cb31d06c452f8b65bea895e646820fa52f656bb6835f039",
       "userInvocableOnly": true
     },
     {
@@ -246,32 +247,31 @@
       "hasScripts": false,
       "id": "in-your-own-words",
       "prerequisites": [],
-      "requiredBy": [],
+      "requiredBy": [
+        "interrogate"
+      ],
       "requires": [],
       "upstreamHash": "3206e955b8764cc58df2d7baa79f32a480ddb729b5c6d44ff823cf01a2a6e454",
       "userInvocableOnly": true
     },
     {
       "bbName": "interrogate",
-      "compatRules": [
-        "bb-path-interrogate-models"
-      ],
-      "description": "Use for \"interrogate\", \"adversarial review\", \"multi-model review\", \"challenge this\", \"stress test this code\", \"find blind spots\", or \"tear this apart\". Multiple LLM reviewers challenge changes from independent angles.",
+      "compatRules": [],
+      "description": "Use for \"interrogate\", \"adversarial review\", \"multi-model review\", \"challenge this\", \"stress test this code\", \"find blind spots\", or \"tear this apart\". Adversaries try to break a change or design, and only findings proven by a run survive.",
       "displayName": "interrogate",
       "group": "verification",
       "hasScripts": false,
       "id": "interrogate",
-      "prerequisites": [
-        "git"
-      ],
+      "prerequisites": [],
       "requiredBy": [
         "architect",
         "poteto-mode"
       ],
       "requires": [
-        "poteto-mode"
+        "arena",
+        "in-your-own-words"
       ],
-      "upstreamHash": "50338915e2063ffabae433089a6ec7bfccca78cd76e4013b3601903d23ff0236",
+      "upstreamHash": "cb397079935cc4dddb540bf7fd2a5d701b65058725b55e6ba8710446b5db1998",
       "userInvocableOnly": true
     },
     {
@@ -296,7 +296,7 @@
     {
       "bbName": "ketchup-video",
       "compatRules": [],
-      "description": "Catch the user up like /ketchup, with a short silent video of slides for what happened and the waiting calls as text under it. Use for /ketchup-video.",
+      "description": "Catch the user up like /ketchup, with a short subtitled video of slides for what happened and the waiting calls as text under it. Use for /ketchup-video.",
       "displayName": "ketchup-video",
       "group": "other",
       "hasScripts": false,
@@ -306,7 +306,7 @@
       "requires": [
         "ketchup"
       ],
-      "upstreamHash": "e2cd5dc2628d008dfd69c21c11311a41685d8e418bef414c0f11755bb98cfc01",
+      "upstreamHash": "390625742ece074a458b05f684bf4bcb765d54486beb9bec2d982d6c703beb9a",
       "userInvocableOnly": true
     },
     {
@@ -400,14 +400,13 @@
       "prerequisites": [],
       "requiredBy": [],
       "requires": [],
-      "upstreamHash": "fd51362bb891b956f0f1679fb02ae76d562f0e79808f279514d4a82a295e2111",
+      "upstreamHash": "329e70ddc0260673c370f43d50949fc7b1b8ad490c144553c25cafd631f45a07",
       "userInvocableOnly": true
     },
     {
       "bbName": "poteto-mode",
       "compatRules": [
         "bb-path-eval-history",
-        "bb-path-orchestrate-history",
         "bb-path-pickup-history",
         "bb-worktree-usage-gate"
       ],
@@ -432,7 +431,6 @@
         "automate-me",
         "figure-it-out",
         "how",
-        "interrogate",
         "no-comments",
         "recall",
         "reflect",
@@ -459,7 +457,6 @@
         "principle-model-the-domain",
         "principle-prove-it-works",
         "principle-redesign-from-first-principles",
-        "principle-separate-before-serializing-shared-state",
         "principle-sequence-verifiable-units",
         "principle-subtract-before-you-add",
         "reflect",
@@ -471,7 +468,7 @@
         "unslop",
         "why"
       ],
-      "upstreamHash": "ccf433b4903515fcf487e13fd2bd344c0c40a138978089f3b441bd94f49f2853",
+      "upstreamHash": "43f5c733322e0e4fd707d67194a29e6403109b8c744293e2178241bcb2cc0368",
       "userInvocableOnly": true
     },
     {
@@ -576,7 +573,7 @@
     {
       "bbName": "principle-explain-the-number",
       "compatRules": [],
-      "description": "Apply before you trust, report, or act on a number you measured: a speedup, a regression, a throughput, a latency, or an eval result. Find what limits it, and rule out that it measured something other than the work you think.",
+      "description": "Apply before you measure, and before you trust, report, or act on a number you measured: a speedup, a regression, a throughput, a latency, or an eval result. Find what limits it, and rule out that it measured something other than the work you think.",
       "displayName": "principle-explain-the-number",
       "group": "principles",
       "hasScripts": false,
@@ -587,7 +584,7 @@
         "benchmark-checklist",
         "principle-prove-it-works"
       ],
-      "upstreamHash": "fc7f87e82f490b60c20876b86717ecff7e49e28175bbba3993c0528227bec5f8",
+      "upstreamHash": "fe9e539182225f9c998f464496e45b2597908bcf45530af736e0e3ea11c11d86",
       "userInvocableOnly": true
     },
     {
@@ -797,9 +794,7 @@
       "hasScripts": false,
       "id": "principle-separate-before-serializing-shared-state",
       "prerequisites": [],
-      "requiredBy": [
-        "poteto-mode"
-      ],
+      "requiredBy": [],
       "requires": [],
       "upstreamHash": "f2717e80bfbea9ae0ed18ecc81631983e39d1201a82c02331f3b65500ca67c39",
       "userInvocableOnly": true
@@ -935,7 +930,7 @@
         "create-formal-verification-skill",
         "create-verification-skill"
       ],
-      "upstreamHash": "fe1266a8fc553133f7192ca58ad093c3269006e8630bb56948acac2e9532f0eb",
+      "upstreamHash": "c47e248d80b4b730f81e9f2c526afad9122fa0b822bd776875932af3fc026e55",
       "userInvocableOnly": false
     },
     {
@@ -980,21 +975,20 @@
     {
       "bbName": "statechart",
       "compatRules": [],
-      "description": "Draw how any system moves between states, such as a product flow, a protocol, or a service, as a Mermaid statechart from a TLA+ model. Each bug is a numbered path with blue borders to a state that breaks a rule. Use for /statechart, to show a bug as a path through states, or to turn an agreed chart into a TLA+ skeleton.",
+      "description": "Check a TLA+ model of a system that moves between states, such as a product flow, a protocol, or a service, and draw it as a Mermaid statechart. The report gives the shortest path to each state that breaks a rule. Use for /statechart, or to show a bug as a path through states.",
       "displayName": "statechart",
       "group": "verification",
       "hasScripts": true,
       "id": "statechart",
       "prerequisites": [
         "node",
-        "npm",
         "sed"
       ],
       "requiredBy": [
         "create-formal-verification-skill"
       ],
       "requires": [],
-      "upstreamHash": "2553a7ef758dbafb496a1c978a7b5dcd823a566550c1901f890c65249b0f3a60",
+      "upstreamHash": "bae4a7e3656ad7e7369ec0d86bf0587631f46dad24ddb6f674d29371761ead37",
       "userInvocableOnly": true
     },
     {
@@ -1143,11 +1137,11 @@
   ],
   "upstream": {
     "author": "Lauren Tan",
-    "commit": "e73df471cd4bd918367e99f3dd9c51bd53ddf5f0",
-    "committedAt": "2026-10-23T15:56:09-07:00",
+    "commit": "c742dd61706fbacc1b95f1a20b7b988cf096ce6c",
+    "committedAt": "2026-10-27T16:12:40-07:00",
     "license": "MIT",
     "path": "pstack",
     "repo": "cursor/plugins",
-    "version": "0.15.32"
+    "version": "0.15.36"
   }
 }
