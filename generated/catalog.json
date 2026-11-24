@@ -386,7 +386,7 @@
       "prerequisites": [],
       "requiredBy": [],
       "requires": [],
-      "upstreamHash": "7793ec6029679a266404349905f0aecac48b50b57619198e8b2e8d21f71049ed",
+      "upstreamHash": "2622e4b90c54ead879a648738c47f83a9f881fa47ee91ecd02b53b6cc8c123bd",
       "userInvocableOnly": true
     },
     {
@@ -861,6 +861,20 @@
       "userInvocableOnly": true
     },
     {
+      "bbName": "reframe",
+      "compatRules": [],
+      "description": "Teach the expert words for what the operator is building, borrow words from neighboring fields that solved the same problem, then rewrite their description with them. Use for /reframe.",
+      "displayName": "reframe",
+      "group": "other",
+      "hasScripts": false,
+      "id": "reframe",
+      "prerequisites": [],
+      "requiredBy": [],
+      "requires": [],
+      "upstreamHash": "f7217a4a785a85fc67ca26f6731dedeecbf9f6520d4b5be1cc7b656cdf937b68",
+      "userInvocableOnly": true
+    },
+    {
       "bbName": "setup-pstack",
       "compatRules": [
         "bb-path-setup-intro",
@@ -1078,11 +1092,11 @@
   ],
   "upstream": {
     "author": "Lauren Tan",
-    "commit": "0b46ec399d55f2829e88822998f53b84944837d3",
-    "committedAt": "2026-11-19T16:12:08-06:00",
+    "commit": "9e278fe4d4ecd8bfe98b1b79bf4be662efb338cc",
+    "committedAt": "2026-11-23T18:41:29-06:00",
     "license": "MIT",
     "path": "pstack",
     "repo": "cursor/plugins",
-    "version": "0.15.46"
+    "version": "0.15.48"
   }
 }
